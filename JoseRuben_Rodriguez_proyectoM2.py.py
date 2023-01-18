@@ -1,8 +1,9 @@
 print("Bienvenido a la actividad del modulo 2")
 print("Favor de escribir los datos solicitados en numero enteros")
 x=(input("Introduzca la coordenada en x: "))
-Caracteres_x=len(x) #La varieble se guarda
-tipo_x=x.isdigit() #Vemos que sea un digito
+Caracteres_x=len(x)
+#Vemos que sea un digito
+tipo_x=x.isdigit() 
 
 #hacemos un while o bucle para hacer que el usuario no deje vacia la casilla, o un caracter no valido
 while Caracteres_x ==0 or tipo_x == False:
@@ -31,24 +32,32 @@ x = int(x)
 y = int(y)
 
 #aqui es donde de verdad ponemos a comparar pra validar los datos y poderlos separar
-
-if x==0 and y==0:  # En dado caso que este en el origen
+# En dado caso que este en el origen
+if x==0 and y==0:  
     print ('Origen')
+    #Si el eje "X" y "Y" son mayores a cero
 elif x>0 and y>0:
-    print ('Cuadrante I') #Si el eje "X" y "Y" son mayores a cero
+    print ('Cuadrante I')
+    # Si el eje "X" es igual a cero y el eje "Y" es mayor a cero 
 elif x==0 and y>0:
-    print("Entre cuadrante I y II") # Si el eje "X" es igual a cero y el eje "Y" es mayor a cero
+    print("Entre cuadrante I y II")
+    # Si el eje "X" es menor a cero, y el eje "Y" es mayor a cero 
 elif x<0 and y>0:
-    print ('Cuadrante II') # Si el eje "X" es menor a cero, y el eje "Y" es mayor a cero
+    print ('Cuadrante II') 
+    # Si el eje "X" es menor a cero y el eje "Y" es igual a cero
 elif x<0 and y==0:
-    print("Entre cuadrante II y III") # Si el eje "X" es menor a cero y el eje "Y" es igual a cero
+    print("Entre cuadrante II y III")
+    #Si el eje "X" y "Y" son menores a cero 
 elif x<0 and y<0:
-    print ('Cuadrante III') #Si el eje "X" y "Y" son menores a cero
+    print ('Cuadrante III') 
+     # Si el eje "X" es igual a cero y el eje "Y" es menor a cero
 elif x==0 and y<0:
-    print("Entre cuadrante III y IV") # Si el eje "X" es igual a cero y el eje "Y" es menor a cero
+    print("Entre cuadrante III y IV")
+    # Si el eje "X" es mayor a cero, y el eje "Y" es menor a cero
 elif x>0 and y<0 :
-    print ('Cuadrante IV ') # Si el eje "X" es mayor a cero, y el eje "Y" es menor a cero
+    print ('Cuadrante IV ')
+    # en caso contrario a los demas si el eje "X" es mayor a cero y el eje "Y" es igual a cero 
 else :
-    print("Entre cuadrante IV y I") # Si el eje "X" es mayor a cero y el eje "Y" es igual a cero
+    print("Entre cuadrante IV y I") 
 
 print(f"Su coordenada introducida es: {(x,y)}") #se imprime las cordenadas con ayuda de f
